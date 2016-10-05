@@ -1,0 +1,13 @@
+{
+    "name": "jadu/doctrine-types",
+    "type": "library",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "description": "Jadu Doctrine Types",
+    "autoload": {
+        "psr-4": {
+            "Jadu\\DoctrineTypes\\": "src/"
+        }
+    }
+}
