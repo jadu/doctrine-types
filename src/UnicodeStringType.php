@@ -4,9 +4,6 @@ namespace Jadu\DoctrineTypes;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 
-/**
- * My custom datatype.
- */
 class UnicodeStringType extends Type
 {
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform)
