@@ -1,17 +1,17 @@
 <?php
+
 namespace Jadu\DoctrineTypes;
 
-use Doctrine\DBAL\Types\Type;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\DBAL\Types\Type;
 
 class UnicodeTextType extends Type
 {
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform)
     {
-        if ($platform->getName() == 'mysql') {
+        if ($platform->getName() === 'mysql') {
             return 'TEXT COMMENT \'(DC2Type:unicodetext)\'';
-        }
-        else {
+        } else {
             return 'NVARCHAR(MAX) COMMENT \'(DC2Type:unicodetext)\'';
         }
     }
