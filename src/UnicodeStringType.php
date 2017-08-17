@@ -15,7 +15,7 @@ class UnicodeStringType extends Type
             return 'VARCHAR(' . (!is_null($fieldDeclaration['length']) ? intval($fieldDeclaration['length']) : '255') . ') COMMENT \'(DC2Type:unicodestring)\'';
         }
         else {
-            return 'NVARCHAR(' . (!is_null($fieldDeclaration['length']) ? intval($fieldDeclaration['length']) : '255') . ') COMMENT \'(DC2Type:unicodestring)\'';
+            return 'NVARCHAR(' . (!is_null($fieldDeclaration['length']) ? intval($fieldDeclaration['length']) : '255') . ')';
         }
     }
 
@@ -32,5 +32,10 @@ class UnicodeStringType extends Type
     public function getName()
     {
         return 'unicodestring';
+    }
+
+    public function requiresSQLCommentHint(AbstractPlatform $platform)
+    {
+        return $platform->getName() != 'mysql';
     }
 }

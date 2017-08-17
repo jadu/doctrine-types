@@ -15,7 +15,7 @@ class UnicodeTextType extends Type
             return 'TEXT COMMENT \'(DC2Type:unicodetext)\'';
         }
         else {
-            return 'NVARCHAR(MAX) COMMENT \'(DC2Type:unicodetext)\'';
+            return 'NVARCHAR(MAX)';
         }
     }
 
@@ -32,5 +32,10 @@ class UnicodeTextType extends Type
     public function getName()
     {
         return 'unicodetext';
+    }
+
+    public function requiresSQLCommentHint(AbstractPlatform $platform)
+    {
+        return $platform->getName() != 'mysql';
     }
 }
