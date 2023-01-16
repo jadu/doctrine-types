@@ -2,8 +2,8 @@
     "name": "jadu/doctrine-types",
     "type": "library",
     "require": {
-        "php": ">=5.3.3",
-        "doctrine/dbal": "^2.5"
+        "php": ">=7.4",
+        "doctrine/dbal": "^2.9"
     },
     "description": "Jadu Doctrine Types",
     "autoload": {
