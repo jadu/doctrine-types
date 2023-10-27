@@ -1,15 +1,9 @@
 {
     "name": "jadu/doctrine-types",
     "type": "library",
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/jadu/doctrine-types.git"
-        }
-    ],
-    "require": {
-        "php": ">=8.1",
-        "doctrine/dbal": "^3.3"
+     "require": {
+        "php": ">=7.4",
+        "doctrine/dbal": "^2.9"
     },
     "description": "Jadu Doctrine Types",
     "autoload": {
