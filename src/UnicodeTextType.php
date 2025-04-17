@@ -15,7 +15,7 @@ class UnicodeTextType extends Type
      *
      * @return string
      */
-    public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform): string
+    public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform)
     {
         if ($platform->getName() === 'mysql') {
             return 'TEXT COMMENT \'(DC2Type:unicodetext)\'';
