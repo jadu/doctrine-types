@@ -3,7 +3,7 @@
     "type": "library",
     "require": {
         "php": ">=7.4",
-        "doctrine/dbal": "^2.9"
+        "doctrine/dbal": "^2.13.9"
     },
     "description": "Jadu Doctrine Types",
     "autoload": {
